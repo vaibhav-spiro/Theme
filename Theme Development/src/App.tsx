@@ -1,12 +1,23 @@
 
-import './App.css'
+import './Styles/main.scss';
+import { useState } from 'react';
 
 function App() {
+  const [theme, setTheme] = useState('theme-light');
+
+  const toggleTheme = () => {
+    setTheme(theme === 'theme-light' ? 'theme-dark' : 'theme-light');
+  };
+
   return (
-    <>
-      <h1>Welcome To Theme App</h1>   
-    </>
-  )
+    <div className={theme}>
+      <button onClick={toggleTheme}>
+        Toggle Theme
+      </button>
+      <p>Hello, this is your themed web app!</p>
+    </div>
+  );
 }
 
-export default App
+export default App;
+

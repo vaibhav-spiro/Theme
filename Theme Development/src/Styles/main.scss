@@ -1,0 +1,19 @@
+/* main.scss */
+@import 'variables'; // Default (light) theme variables
+
+body {
+  background-color: $background-color;
+  color: $text-color;
+}
+
+.theme-dark {
+  @import '_themeDark';
+  background-color: $background-color;
+  color: $text-color;
+}
+
+.theme-light {
+  @import '_themeLight';
+  background-color: $background-color;
+  color: $text-color;
+}
